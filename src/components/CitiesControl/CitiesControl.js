@@ -46,16 +46,16 @@ class CitiesControl extends PureComponent {
                                     value={this.state.city}
                                 />
                             </div>
-                            {!noResults ?
-                                <SearchedResults
-                                    noResults={noResults}
-                                    results={citiesList}
-                                    activeCity={activeCity}
-                                    getWeather={this.onGetWeather}
-                                    showCitiesList={showCitiesList}
-                                /> : null
+                            <SearchedResults
+                                noResults={noResults}
+                                results={citiesList}
+                                activeCity={activeCity}
+                                getWeather={this.onGetWeather}
+                                showCitiesList={showCitiesList}
+                            /> 
+                            {!citiesList.length && noResults &&
+                                <div className={styles.Empty}>empty...</div>
                             }
-                            
                         </div>
                         <div className={styles.RightSide}>
                             <Button

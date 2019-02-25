@@ -17,9 +17,6 @@ const SearchedResults = ({ results, activeCity, noResults, getWeather, showCitie
                     getWeather={getWeather}
                 />
             ))}
-            {!results.length && noResults &&
-                <div>empty</div>
-            }
         </div>
     );
 
