@@ -10,7 +10,6 @@ class Result extends PureComponent{
     }
     render() {
         const { cityName, checked, country, region } = this.props;
-        console.log(cityName)
         return (
             <div
                 className={cx(styles.Result, { [styles.Checked]: checked })}
